@@ -1,21 +1,18 @@
 import streamlit as st
 import requests
 
-# ตั้งค่าหน้าเว็บ
 st.set_page_config(page_title="ระบบแปลงอัตราแลกเปลี่ยนเงินตรา", page_icon="💱")
 
-st.title("💱 โปรแกรมแปลงอัตราแลกเปลี่ยนเงินตรา")
+st.title("โปรแกรมแปลงอัตราแลกเปลี่ยนเงินตรา")
 st.write("ดึงข้อมูลอัตราแลกเปลี่ยนแบบ Real-time จาก ExchangeRate-API")
 
-# API Key ของคุณ
+# API Key
 API_KEY = "9db5ab62431cea2ed028be23"
 
-# ตัวเลือกสกุลเงินยอดนิยม
+# สกุลเงิน
 CURRENCIES = ["USD", "THB", "EUR", "JPY", "GBP", "AUD", "CAD", "CNY", "SGD"]
 
-# ----------------------------------------------------
 # ฟังก์ชันดึงข้อมูลแบบ Caching (จำค่าไว้ 1 ชั่วโมง = 3600 วินาที)
-# ----------------------------------------------------
 @st.cache_data(ttl=3600)
 def fetch_exchange_rate(api_key, from_curr, to_curr):
     url = f"https://v6.exchangerate-api.com/v6/{api_key}/pair/{from_curr}/{to_curr}"
