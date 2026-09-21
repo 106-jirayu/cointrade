@@ -1,9 +1,9 @@
 import streamlit as st
 import requests
 
-st.set_page_config(page_title="ระบบแปลงอัตราแลกเปลี่ยนเงินตรา", page_icon="💱")
+st.set_page_config(page_title="อัตราแลกเปลี่ยนเงินตราระหว่างประเทศ", page_icon="💱")
 
-st.title("โปรแกรมแปลงอัตราแลกเปลี่ยนเงินตรา")
+st.title("อัตราแลกเปลี่ยนเงินตราระหว่างประเทศ")
 st.write("ดึงข้อมูลอัตราแลกเปลี่ยนแบบ Real-time จาก ExchangeRate-API")
 
 # API Key
