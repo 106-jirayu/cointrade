@@ -4,7 +4,7 @@ import requests
 st.set_page_config(page_title="อัตราแลกเปลี่ยนเงินตราระหว่างประเทศ", page_icon="💱")
 
 st.title("อัตราแลกเปลี่ยนเงินตราระหว่างประเทศ")
-st.write("ดึงข้อมูลอัตราแลกเปลี่ยนแบบ Real-time จาก ExchangeRate-API")
+st.write("ดึงข้อมูลอัตราแลกเปลี่ยนแบบ Real-time")
 
 # API Key
 API_KEY = "9db5ab62431cea2ed028be23"
